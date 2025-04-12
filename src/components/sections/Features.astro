@@ -42,14 +42,24 @@ import Title from "../shared/Title.astro";
                 
                 <!-- Add glow effect only visible in dark mode -->
                 <div class="absolute w-[80%] h-[80%] left-1/2 -translate-x-1/2 bottom-1/2 translate-y-1/2 bg-yellow-300/30 blur-3xl rounded-full opacity-0 dark:opacity-60 transition-opacity duration-300"></div>
-                
-                <img 
-                    src={"/images/light.png"} 
-                    alt="banner image"
-                    width="1240" 
-                    height="1385"
-                    class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" 
-                />
+
+				<!-- Light mode image -->
+				<img 
+				  src="/images/light.png" 
+				  alt="banner image"
+				  width="1240" 
+				  height="1385"
+				  class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full block dark:hidden" 
+				/>
+
+				<!-- Dark mode image -->
+				<img 
+				  src="/images/light-on.png" 
+				  alt="banner image (lit)"
+				  width="1240" 
+				  height="1385"
+				  class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full hidden dark:block" 
+				/>
             </div>
         </div>
     </Container>
